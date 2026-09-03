@@ -33,18 +33,18 @@
     <main class="main">
       <header class="topbar"><div><div class="eyebrow" id="todayDate">今天</div><h1 id="pageTitle">今天穿什么</h1></div><button class="pill" data-action="refresh" title="刷新天气"><span class="dot" id="weatherDot"></span><span id="weatherStatus">正在获取天气…</span></button></header>
       <section class="view active" id="today">
-        <div class="hero"><div class="hero-grid"><div><div class="eyebrow" style="color:#bde1cf" id="heroCity">福建省 · 福州市</div><h2>今天适合分层穿，<br/>中午可以轻装。</h2><p>你对寒冷略敏感，早晨骑车有风，建议保留一件防风外层。</p></div><div class="weather-big"><strong id="heroTemp">12°</strong><span id="heroFeels">体感 8° · 晴间多云</span><span id="heroRange">最高 20°　最低 12°</span></div></div><div class="hero-actions"><button class="btn primary" data-action="feedback">记录今日体感</button><button class="btn ghost" data-action="context">调整今天场景</button></div></div>
+        <div class="hero"><div class="hero-grid"><div><div class="eyebrow" style="color:#bde1cf" id="heroCity">福建省 · 福州市</div><h2 id="heroAdvice">正在生成今天的<br/>个性化穿衣建议。</h2><p id="heroReason">正在结合最新天气、个人体感和骑车场景计算。</p></div><div class="weather-big"><strong id="heroTemp">--°</strong><span id="heroFeels">正在读取体感温度</span><span id="heroRange">最高 --°　最低 --°</span></div></div><div class="hero-actions"><button class="btn primary" data-action="feedback">记录今日体感</button><button class="btn ghost" data-action="context">调整今天场景</button></div></div>
         <div class="grid"><div class="panel"><div class="panel-head"><h3>今日首选穿搭</h3><button class="link" data-action="detail">查看分时详情 →</button></div><div class="look" id="look"></div><div class="notice"><span>↗</span><div><b>为什么这样穿</b><br/><span id="whyText">正在根据最新天气生成解释。</span></div></div></div><div class="panel"><div class="panel-head"><h3>今天留意</h3><span class="pill" id="freshnessLabel">正在刷新</span></div><div class="reason-list"><div class="reason"><span class="reason-dot">雨</span><span id="rainText">正在读取降雨概率。</span></div><div class="reason"><span class="reason-dot">风</span><span id="windText">正在读取风速。</span></div><div class="reason"><span class="reason-dot">紫</span><span id="uvText">正在读取紫外线指数。</span></div></div></div></div>
         <div class="panel section"><div class="panel-head"><h3>分时段变化</h3><button class="link" data-action="detail">完整详情 →</button></div><div class="timeline" id="timeline"></div></div>
       </section>
-      <section class="view" id="wardrobe"><div class="panel"><div class="panel-head"><div><div class="eyebrow">已有 6 件衣物</div><h3 style="margin-top:4px;font-size:20px">我的衣橱</h3></div><button class="btn soft" data-action="addItem">＋ 添加衣物</button></div><div class="wardrobe" id="wardrobeGrid"></div></div></section>
+      <section class="view" id="wardrobe"><div class="panel"><div class="panel-head"><div><div class="eyebrow" id="wardrobeCount">已有 0 件衣物</div><h3 style="margin-top:4px;font-size:20px">我的衣橱</h3></div><button class="btn soft" data-action="addItem">＋ 添加衣物</button></div><div class="wardrobe" id="wardrobeGrid"></div></div></section>
       <section class="view" id="trend"><div class="panel"><div class="panel-head"><div><div class="eyebrow">反馈正在让模型变准</div><h3 style="margin-top:4px;font-size:20px">个性化趋势</h3></div><div class="filter"><button class="active">7天</button><button>14天</button><button>30天</button></div></div><div class="metric-row"><div class="metric"><b id="scoreMetric">72%</b><small>刚刚好比例</small></div><div class="metric"><b id="sMetric">+0.8</b><small>冷热敏感系数</small></div><div class="metric"><b>18</b><small>有效反馈</small></div></div><div class="bar-chart" id="bars"></div><div class="panel-head" style="margin-top:18px;margin-bottom:8px"><h3>系数修正记录</h3><span class="pill">规则模型 v1.0</span></div><div class="reason-list"><div class="reason"><span class="reason-dot">+0.11</span><span>8月12日早晨骑车“有点少”，系数从 +0.69 调整到 +0.80。</span></div><div class="reason"><span class="reason-dot">0</span><span>8月11日中午“刚刚好”，保持当前系数。</span></div><div class="reason"><span class="reason-dot">−0.08</span><span>8月10日傍晚“有点多”，减少厚重外层优先级。</span></div></div></div></section>
-      <section class="view" id="settings"><div class="panel"><div class="eyebrow">偏好与数据</div><h3 style="margin:4px 0 14px;font-size:20px">设置</h3><div class="settings-list"><div class="setting"><div><b>早晨提醒</b><small>工作日 06:45 推送今日建议</small></div><button class="switch on" data-toggle="reminder"><i></i></button></div><div class="setting"><div><b>默认地区</b><small id="settingCity">福建省 · 福州市</small></div><button class="link" data-action="region">修改 →</button></div><div class="setting"><div><b>默认出行方式</b><small>骑车上学</small></div><button class="link" data-action="context">修改 →</button></div><div class="setting"><div><b>天气数据来源</b><small id="weatherSourceText">Open-Meteo · 正在获取</small></div><button class="link" data-action="refresh">刷新 →</button></div><div class="setting"><div><b>隐私与数据</b><small>个人资料、衣橱和反馈仅保存在此设备</small></div><button class="link" data-action="privacy">查看 →</button></div><div class="setting"><div><b>算法说明</b><small>温度、湿度、风速 + 你的反馈</small></div><button class="link" data-action="algorithm">了解 →</button></div></div></div></section>
+      <section class="view" id="settings"><div class="panel"><div class="eyebrow">偏好与数据</div><h3 style="margin:4px 0 14px;font-size:20px">设置</h3><div class="settings-list"><div class="setting"><div><b>早晨提醒</b><small>工作日 06:45 推送今日建议</small></div><button class="switch on" data-toggle="reminder"><i></i></button></div><div class="setting"><div><b>默认地区</b><small id="settingCity">福建省 · 福州市</small></div><button class="link" data-action="region">修改 →</button></div><div class="setting"><div><b>默认出行方式</b><small>骑车上学</small></div><button class="link" data-action="context">修改 →</button></div><div class="setting"><div><b>天气数据来源</b><small id="weatherSourceText">Open-Meteo · 正在获取</small></div><button class="link" data-action="refresh">刷新 →</button></div><div class="setting"><div><b>自动更新</b><small>每 15 分钟及返回前台时检查</small></div><span class="pill">已开启</span></div><div class="setting"><div><b>应用版本</b><small>2026.09 动态天气版</small></div><span class="pill">v1.1</span></div><div class="setting"><div><b>隐私与数据</b><small>个人资料、衣橱和反馈仅保存在此设备</small></div><button class="link" data-action="privacy">查看 →</button></div><div class="setting"><div><b>算法说明</b><small>温度、湿度、风速 + 你的反馈</small></div><button class="link" data-action="algorithm">了解 →</button></div></div></div></section>
     </main>
   </div>
   <nav class="mobile-nav"><button class="active" data-view="today"><span>⌂</span>今天</button><button data-view="wardrobe"><span>◈</span>衣橱</button><button data-view="trend"><span>⌁</span>趋势</button><button data-view="settings"><span>⚙</span>设置</button></nav>
   <div class="modal" id="modal"><div class="sheet" id="sheet"></div></div><div class="toast" id="toast"></div>
-  <script>
+  <script type="application/json" id="legacy-script">
     const wardrobe=[['长袖T恤','基础上装','👕','我的衣橱','0.16'],['卫衣','中间层','🧥','我的衣橱','0.25'],['薄棉服','外套','🧥','我的衣橱','0.28'],['普通长裤','下装','👖','我的衣橱','0.22'],['运动鞋','鞋子','👟','我的衣橱','0.05'],['防晒帽','配件','🧢','我的衣橱','—']];
     const cities={fuzhou:{name:'福州市',district:'鼓楼区',temp:'13°',feels:'体感 10° · 多云',range:'最高 20°　最低 13°',morning:['13°','骑车 · 风 3级','建议穿上防风外套'],noon:['20°','日常 · UV 4','可以脱掉外层'],evening:['16°','步行 · 风 2级','保留薄外套']},xiamen:{name:'厦门市',district:'思明区',temp:'24°',feels:'体感 27° · 晴',range:'最高 31°　最低 24°',morning:['25°','步行 · 风 3级','短袖配轻薄防晒衣'],noon:['31°','户外 · UV 8','注意防晒和补水'],evening:['28°','步行 · 风 2级','短袖即可']},quanzhou:{name:'泉州市',district:'丰泽区',temp:'24°',feels:'体感 27° · 晴间多云',range:'最高 32°　最低 24°',morning:['25°','公交 · 风 2级','短袖配薄外层'],noon:['32°','户外 · UV 8','防晒帽和清爽上装'],evening:['28°','步行 · 风 2级','短袖即可']},putian:{name:'莆田市',district:'城厢区',temp:'23°',feels:'体感 26° · 多云',range:'最高 30°　最低 23°',morning:['24°','骑车 · 风 3级','短袖配防晒衣'],noon:['30°','日常 · UV 6','可脱掉防晒衣'],evening:['27°','步行 · 风 2级','短袖即可']},zhangzhou:{name:'漳州市',district:'芗城区',temp:'25°',feels:'体感 28° · 晴',range:'最高 33°　最低 25°',morning:['26°','公交 · 风 2级','短袖即可'],noon:['33°','户外 · UV 9','防晒帽和透气上装'],evening:['29°','步行 · 风 2级','短袖即可']},longyan:{name:'龙岩市',district:'新罗区',temp:'22°',feels:'体感 24° · 多云',range:'最高 29°　最低 22°',morning:['22°','步行 · 风 2级','长袖T恤配薄外套'],noon:['29°','日常 · UV 5','可以脱掉外层'],evening:['24°','步行 · 风 2级','薄外套备用']},sanming:{name:'三明市',district:'三元区',temp:'21°',feels:'体感 23° · 阴',range:'最高 27°　最低 21°',morning:['21°','骑车 · 风 2级','长袖配防风薄外套'],noon:['27°','日常 · UV 3','可脱掉外层'],evening:['23°','步行 · 风 2级','薄外套备用']},nanping:{name:'南平市',district:'延平区',temp:'20°',feels:'体感 22° · 小雨',range:'最高 26°　最低 20°',morning:['20°','步行 · 风 2级','长袖配防水外层'],noon:['25°','室内 · UV 2','备好雨伞'],evening:['21°','步行 · 风 2级','防水外层备用']},ningde:{name:'宁德市',district:'蕉城区',temp:'22°',feels:'体感 25° · 多云',range:'最高 29°　最低 22°',morning:['22°','骑车 · 风 4级','短袖配防风外套'],noon:['29°','户外 · UV 6','防晒衣可穿可脱'],evening:['25°','步行 · 风 3级','薄外套备用']}};
     const coords={fuzhou:[26.0745,119.2965],xiamen:[24.4798,118.0894],quanzhou:[24.8741,118.6757],putian:[25.454,119.0078],zhangzhou:[24.5135,117.6471],longyan:[25.0751,117.0174],sanming:[26.2639,117.6389],nanping:[26.6418,118.1777],ningde:[26.6657,119.5482]};
@@ -67,6 +67,358 @@
     function detail(){const c=cities[currentCity];const base=liveWeather?Math.round(liveWeather.current.apparent_temperature):8;const effective=liveWeather?Math.round(base-2.0):4.6;const clo=liveWeather?Math.max(.15,Math.min(1.5,.04*(30-effective))).toFixed(2):'1.02';const wind=liveWeather?Math.round(liveWeather.current.wind_speed_10m):4;openSheet('分时段穿衣详情',`<div class="filter" style="margin-bottom:14px"><button class="active">早晨</button><button>中午</button><button>傍晚</button></div><div class="metric-row"><div class="metric"><b>${base}°</b><small>基础体感</small></div><div class="metric"><b>${effective}°</b><small>个人等效</small></div><div class="metric"><b>${clo}</b><small>目标保暖值</small></div></div><div class="notice" style="margin-top:16px"><span>↗</span><div><b>推荐组合</b><br/>长袖T恤 + 卫衣 + 薄棉服 + 普通长裤 + 运动鞋</div></div><div class="reason-list" style="margin-top:16px"><div class="reason"><span class="reason-dot">风</span><span>${liveWeather?'最新风速':'演示风速'}约 ${wind} km/h，骑车时建议防风外层。</span></div><div class="reason"><span class="reason-dot">你</span><span>你对寒冷略敏感，个人修正约 −1.6℃。</span></div><div class="reason"><span class="reason-dot">时</span><span>${liveWeather?'以上数值来自 Open-Meteo 最新天气。':'当前为演示数据，联网后会自动替换。'}</span></div></div>`)}
     function addItem(){openSheet('添加衣物',`<div class="field"><label>衣物名称</label><input placeholder="例如：灰色抓绒" /></div><div class="field"><label>类别</label><select><option>基础上装</option><option>中间层</option><option>外套</option><option>下装</option><option>鞋子</option></select></div><div class="field"><label>保暖程度</label><select><option>适中</option><option>偏薄</option><option>偏暖</option><option>很暖</option></select></div>`,`<button class="btn outline" data-close>取消</button><button class="btn soft" data-item-save>加入衣橱</button>`)}
     document.addEventListener('click',e=>{const v=e.target.closest('[data-view]');if(v){document.querySelectorAll('[data-view]').forEach(x=>x.classList.toggle('active',x===v||x.dataset.view===v.dataset.view));document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id===v.dataset.view));document.getElementById('pageTitle').textContent={today:'今天穿什么',wardrobe:'我的衣橱',trend:'个性化趋势',settings:'设置'}[v.dataset.view];return}const a=e.target.closest('[data-action]')?.dataset.action;if(a==='feedback')feedback();if(a==='context')context();if(a==='region')region();if(a==='refresh')fetchWeather();if(a==='detail')detail();if(a==='addItem')addItem();if(e.target.matches('[data-close]'))els.modal.classList.remove('open');if(e.target.matches('[data-submit]')){els.modal.classList.remove('open');toast('反馈已保存，冷热敏感系数 +0.11');document.getElementById('sMetric').textContent='+0.91'}if(e.target.matches('[data-context-save]')){els.modal.classList.remove('open');toast('已按当前场景重新生成建议');}if(e.target.matches('[data-region-save]')){const selected=document.getElementById('regionSelect')?.value;if(selected&&cities[selected]){currentCity=selected;localStorage.setItem('yzn-city',selected);liveWeather=null;render();els.modal.classList.remove('open');toast(`地区已切换为${cities[selected].name}`);fetchWeather()}}if(e.target.matches('[data-item-save]')){els.modal.classList.remove('open');toast('衣物已加入衣橱');}if(e.target.matches('[data-toggle]')){e.target.classList.toggle('on');toast(e.target.classList.contains('on')?'早晨提醒已开启':'早晨提醒已关闭')}});render();fetchWeather();if('serviceWorker' in navigator&&location.protocol.startsWith('http')){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
+  </script>
+  <script>
+    const APP_VERSION = '1.1.0';
+    const REFRESH_INTERVAL_MS = 15 * 60 * 1000;
+    const PERSONAL_SENSITIVITY_OFFSET = 1.6;
+    const citiesV11 = {
+      fuzhou:{name:'福州市',district:'鼓楼区',lat:26.0745,lon:119.2965,demoTemp:25},
+      xiamen:{name:'厦门市',district:'思明区',lat:24.4798,lon:118.0894,demoTemp:27},
+      quanzhou:{name:'泉州市',district:'丰泽区',lat:24.8741,lon:118.6757,demoTemp:27},
+      putian:{name:'莆田市',district:'城厢区',lat:25.454,lon:119.0078,demoTemp:26},
+      zhangzhou:{name:'漳州市',district:'芗城区',lat:24.5135,lon:117.6471,demoTemp:28},
+      longyan:{name:'龙岩市',district:'新罗区',lat:25.0751,lon:117.0174,demoTemp:24},
+      sanming:{name:'三明市',district:'三元区',lat:26.2639,lon:117.6389,demoTemp:23},
+      nanping:{name:'南平市',district:'延平区',lat:26.6418,lon:118.1777,demoTemp:22},
+      ningde:{name:'宁德市',district:'蕉城区',lat:26.6657,lon:119.5482,demoTemp:24}
+    };
+    const wardrobeV11 = [
+      {name:'短袖T恤',type:'基础上装',emoji:'👕',clo:'0.08'},
+      {name:'长袖T恤',type:'基础上装',emoji:'👕',clo:'0.16'},
+      {name:'卫衣',type:'中间层',emoji:'🧥',clo:'0.25'},
+      {name:'轻薄防风衣',type:'外套',emoji:'🧥',clo:'0.12'},
+      {name:'薄棉服',type:'外套',emoji:'🧥',clo:'0.28'},
+      {name:'速干长裤',type:'下装',emoji:'👖',clo:'0.12'},
+      {name:'普通长裤',type:'下装',emoji:'👖',clo:'0.22'},
+      {name:'运动鞋',type:'鞋子',emoji:'👟',clo:'0.05'},
+      {name:'防晒帽',type:'配件',emoji:'🧢',clo:'—'},
+      {name:'折叠伞',type:'配件',emoji:'☂️',clo:'—'}
+    ];
+    let currentCityV11 = localStorage.getItem('yzn-city') || 'fuzhou';
+    if (!citiesV11[currentCityV11]) currentCityV11 = 'fuzhou';
+    let liveWeatherV11 = null;
+    let weatherFetchedAt = 0;
+    let weatherMode = 'demo';
+    let fetchInProgress = null;
+    let renderedDateKey = localDateKey();
+
+    const ui = {
+      look:document.getElementById('look'), timeline:document.getElementById('timeline'),
+      wardrobeGrid:document.getElementById('wardrobeGrid'), modal:document.getElementById('modal'),
+      sheet:document.getElementById('sheet'), toast:document.getElementById('toast')
+    };
+
+    function localDateKey(date = new Date()) {
+      return new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
+    }
+    function updateDate() {
+      const now = new Date();
+      document.getElementById('todayDate').textContent = new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'long',day:'numeric',weekday:'short'}).format(now);
+      document.title = `衣知暖 · ${new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric'}).format(now)}`;
+    }
+    function formatStamp(timestamp) {
+      return new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(timestamp).replace(/\//g,'/');
+    }
+    function ageText(timestamp) {
+      const minutes = Math.max(0, Math.floor((Date.now() - timestamp) / 60000));
+      if (minutes < 1) return '刚刚';
+      if (minutes < 60) return `${minutes}分钟前`;
+      const hours = Math.floor(minutes / 60);
+      if (hours < 24) return `${hours}小时前`;
+      return `${Math.floor(hours / 24)}天前`;
+    }
+    function weatherLabelV11(code) {
+      if (code === 0) return '晴';
+      if ([1,2,3].includes(code)) return '多云';
+      if ([45,48].includes(code)) return '有雾';
+      if ([51,53,55,56,57,61,63,65,66,67,80,81,82,95,96,99].includes(code)) return '有雨';
+      if ([71,73,75,77,85,86].includes(code)) return '有雪';
+      return '天气变化';
+    }
+    function safeNumber(value, fallback = 0) {
+      return Number.isFinite(Number(value)) ? Number(value) : fallback;
+    }
+    function dailyIndex(data) {
+      const date = data?.current?.time?.slice(0,10) || localDateKey();
+      const index = data?.daily?.time?.indexOf(date) ?? -1;
+      return index >= 0 ? index : 0;
+    }
+    function getConditions(data) {
+      const city = citiesV11[currentCityV11];
+      if (!data) return {temp:city.demoTemp,feels:city.demoTemp - 1,rain:20,wind:5,uv:4,code:2,max:city.demoTemp + 3,min:city.demoTemp - 3};
+      const day = dailyIndex(data);
+      return {
+        temp:safeNumber(data.current?.temperature_2m,city.demoTemp),
+        feels:safeNumber(data.current?.apparent_temperature,city.demoTemp - 1),
+        rain:safeNumber(data.daily?.precipitation_probability_max?.[day],0),
+        wind:safeNumber(data.current?.wind_speed_10m,0),
+        uv:safeNumber(data.daily?.uv_index_max?.[day],0),
+        code:safeNumber(data.current?.weather_code,2),
+        max:safeNumber(data.daily?.temperature_2m_max?.[day],city.demoTemp + 3),
+        min:safeNumber(data.daily?.temperature_2m_min?.[day],city.demoTemp - 3)
+      };
+    }
+    function pickItems(names) {
+      return names.map(name => wardrobeV11.find(item => item.name === name)).filter(Boolean);
+    }
+    function makeRecommendation(data) {
+      const c = getConditions(data);
+      const effective = c.feels - PERSONAL_SENSITIVITY_OFFSET;
+      let names, title, baseReason;
+      if (effective >= 30) {
+        names = ['短袖T恤','速干长裤','运动鞋'];
+        title = '今天炎热，选择轻薄透气穿搭。';
+        baseReason = '个人等效温度较高，减少中间层并优先选择透气衣物';
+      } else if (effective >= 26) {
+        names = ['短袖T恤','速干长裤','运动鞋'];
+        title = '今天偏热，轻装并注意防晒。';
+        baseReason = '当前体感偏热，短袖和轻薄长裤更利于散热';
+      } else if (effective >= 22) {
+        names = ['短袖T恤','轻薄防风衣','速干长裤','运动鞋'];
+        title = '今天温暖，带一件轻薄外层。';
+        baseReason = '早晚与室内可能稍凉，可穿脱外层更灵活';
+      } else if (effective >= 17) {
+        names = ['长袖T恤','轻薄防风衣','普通长裤','运动鞋'];
+        title = '今天稍凉，长袖搭配轻薄外套。';
+        baseReason = '结合你的怕冷程度，长袖和防风外层更舒适';
+      } else if (effective >= 10) {
+        names = ['长袖T恤','卫衣','轻薄防风衣','普通长裤','运动鞋'];
+        title = '今天偏凉，建议分层保暖。';
+        baseReason = '个人等效温度偏低，分层穿着方便随温度调整';
+      } else {
+        names = ['长袖T恤','卫衣','薄棉服','普通长裤','运动鞋'];
+        title = '今天较冷，注意保暖和防风。';
+        baseReason = '个人等效温度较低，需要中间层和保暖外套';
+      }
+      if (c.uv >= 6 && effective >= 22) names.push('防晒帽');
+      if (c.rain >= 45) names.push('折叠伞');
+      const extra = [];
+      if (c.wind >= 15) extra.push('风速较高');
+      if (c.rain >= 45) extra.push(`降雨概率 ${Math.round(c.rain)}%`);
+      if (c.uv >= 6) extra.push(`紫外线指数 ${Math.round(c.uv)}`);
+      return {conditions:c,effective,items:pickItems([...new Set(names)]),title,reason:`${baseReason}${extra.length ? `；同时考虑${extra.join('、')}` : ''}。`};
+    }
+    function periodAdvice(temp, rain, wind) {
+      if (rain >= 45) return '带好雨具，外层注意防水';
+      if (wind >= 15) return '风较大，骑车增加防风外层';
+      if (temp >= 30) return '炎热，选择透气衣物并补水';
+      if (temp >= 26) return '偏热，轻装并注意防晒';
+      if (temp >= 22) return '温暖，薄外层可随时脱下';
+      if (temp >= 16) return '稍凉，保留长袖或薄外套';
+      return '偏冷，使用可穿脱保暖层';
+    }
+    function livePeriodRowsV11(data) {
+      const h = data?.hourly;
+      if (!h?.time?.length) return demoPeriodRows();
+      const date = data.current?.time?.slice(0,10) || localDateKey();
+      const ranges = [['早晨','06:00–09:00',6,9],['中午','11:00–14:00',11,14],['傍晚','17:00–20:00',17,20]];
+      return ranges.map(([name,label,start,end]) => {
+        const indexes = h.time.map((time,index) => ({time,index})).filter(x => x.time.startsWith(`${date}T`) && safeNumber(x.time.slice(11,13),-1) >= start && safeNumber(x.time.slice(11,13),-1) <= end).map(x => x.index);
+        const selected = indexes.length ? indexes : [Math.max(0,h.time.findIndex(time => time.startsWith(`${date}T`)))];
+        const first = selected[0];
+        const temps = selected.map(i => safeNumber(h.apparent_temperature?.[i],h.temperature_2m?.[i]));
+        const rains = selected.map(i => safeNumber(h.precipitation_probability?.[i],0));
+        const winds = selected.map(i => safeNumber(h.wind_speed_10m?.[i],0));
+        const temp = Math.round(temps.reduce((sum,value) => sum + value,0) / temps.length);
+        const rain = Math.round(Math.max(...rains));
+        const wind = Math.round(Math.max(...winds));
+        return [name,label,`${temp}°`,`风 ${wind} km/h · ${weatherLabelV11(safeNumber(h.weather_code?.[first],2))}`,periodAdvice(temp,rain,wind)];
+      });
+    }
+    function demoPeriodRows() {
+      const base = citiesV11[currentCityV11].demoTemp;
+      return [
+        ['早晨','06:00–09:00',`${base - 2}°`,'演示 · 多云',periodAdvice(base - 2,20,6)],
+        ['中午','11:00–14:00',`${base + 3}°`,'演示 · 多云',periodAdvice(base + 3,20,6)],
+        ['傍晚','17:00–20:00',`${base}°`,'演示 · 多云',periodAdvice(base,20,6)]
+      ];
+    }
+    function weatherRowV11(period) {
+      return `<button class="time-row" data-action="detail"><span class="time-label"><b>${period[0]}</b><small>${period[1]}</small></span><span class="time-weather"><strong>${period[2]}</strong>${period[3]} · ${period[4]}</span><span class="chev">›</span></button>`;
+    }
+    function renderV11() {
+      updateDate();
+      const city = citiesV11[currentCityV11];
+      const recommendation = makeRecommendation(liveWeatherV11);
+      const c = recommendation.conditions;
+      document.getElementById('heroCity').textContent = `福建省 · ${city.name} · ${city.district}`;
+      document.getElementById('settingCity').textContent = `福建省 · ${city.name}`;
+      document.getElementById('heroTemp').textContent = `${Math.round(c.temp)}°`;
+      document.getElementById('heroFeels').textContent = `体感 ${Math.round(c.feels)}° · ${weatherLabelV11(c.code)}`;
+      document.getElementById('heroRange').textContent = `最高 ${Math.round(c.max)}°　最低 ${Math.round(c.min)}°`;
+      document.getElementById('heroAdvice').innerHTML = recommendation.title.replace('，','，<br/>');
+      document.getElementById('heroReason').textContent = recommendation.reason;
+      ui.look.innerHTML = recommendation.items.map(item => `<div class="item"><div class="item-emoji">${item.emoji}</div><b>${item.name}</b><small>${item.type}</small><span class="tag">我的衣橱</span></div>`).join('');
+      ui.timeline.innerHTML = (liveWeatherV11 ? livePeriodRowsV11(liveWeatherV11) : demoPeriodRows()).map(weatherRowV11).join('');
+      ui.wardrobeGrid.innerHTML = wardrobeV11.map(item => `<div class="wardrobe-card"><div class="item-emoji">${item.emoji}</div><p>${item.name}</p><small>${item.type} · 保暖 ${item.clo}</small></div>`).join('');
+      document.getElementById('wardrobeCount').textContent = `已有 ${wardrobeV11.length} 件衣物`;
+      document.getElementById('whyText').textContent = `${weatherMode === 'live' ? '最新天气' : weatherMode === 'cache' ? '缓存天气' : '演示天气'}显示体感 ${Math.round(c.feels)}℃、风速 ${Math.round(c.wind)} km/h；${recommendation.reason}`;
+      document.getElementById('rainText').textContent = `今日最高降雨概率 ${Math.round(c.rain)}%，${c.rain >= 45 ? '请准备雨具。' : '目前无需专门增加防水层。'}`;
+      document.getElementById('windText').textContent = `当前风速 ${Math.round(c.wind)} km/h，${c.wind >= 15 ? '骑车建议使用防风外层。' : '风力对穿搭影响较小。'}`;
+      document.getElementById('uvText').textContent = `UV ${Math.round(c.uv)}，${c.uv >= 6 ? '午后户外请重点防晒。' : '常规户外防晒即可。'}`;
+      document.getElementById('bars').innerHTML = [['D1',42,1],['D2',58,1],['D3',50,0],['D4',67,1],['D5',72,1],['D6',64,0],['D7',78,1]].map(x => `<div class="bar-wrap"><div class="bar ${x[2] ? '' : 'muted'}" style="height:${x[1]}%" title="${x[1]}%"></div><span class="bar-label">${x[0]}</span></div>`).join('');
+    }
+    function setWeatherStatusV11(mode, timestamp = 0) {
+      weatherMode = mode;
+      const status = document.getElementById('weatherStatus');
+      const dot = document.getElementById('weatherDot');
+      const freshness = document.getElementById('freshnessLabel');
+      const source = document.getElementById('weatherSourceText');
+      if (mode === 'loading') {
+        status.textContent = '正在获取天气…'; dot.style.background = '#d6a331'; freshness.textContent = '正在刷新'; source.textContent = 'Open-Meteo · 正在获取';
+      } else if (mode === 'live') {
+        status.textContent = `最新 · ${formatStamp(timestamp)}`; dot.style.background = '#55a979'; freshness.textContent = `最新天气 · ${ageText(timestamp)}`; source.textContent = `Open-Meteo · ${formatStamp(timestamp)}`;
+      } else if (mode === 'cache') {
+        status.textContent = `缓存 · ${formatStamp(timestamp)}`; dot.style.background = '#d6a331'; freshness.textContent = `缓存 · ${ageText(timestamp)}`; source.textContent = `Open-Meteo 缓存 · ${formatStamp(timestamp)}`;
+      } else {
+        status.textContent = '演示数据'; dot.style.background = '#d6a331'; freshness.textContent = '演示数据'; source.textContent = 'Open-Meteo 暂不可用';
+      }
+    }
+    function showToast(message) {
+      ui.toast.textContent = message;
+      ui.toast.classList.add('show');
+      clearTimeout(showToast.timer);
+      showToast.timer = setTimeout(() => ui.toast.classList.remove('show'),2300);
+    }
+    function loadCachedWeather() {
+      const raw = localStorage.getItem(`yzn-weather-${currentCityV11}`);
+      if (!raw) return false;
+      try {
+        const saved = JSON.parse(raw);
+        if (!saved?.data || !saved?.fetchedAt) return false;
+        liveWeatherV11 = saved.data;
+        weatherFetchedAt = Number(saved.fetchedAt);
+        weatherMode = 'cache';
+        renderV11();
+        setWeatherStatusV11('cache',weatherFetchedAt);
+        return true;
+      } catch (_) { return false; }
+    }
+    async function fetchWeatherV11({manual = false} = {}) {
+      if (fetchInProgress) return fetchInProgress;
+      const city = citiesV11[currentCityV11];
+      setWeatherStatusV11('loading');
+      fetchInProgress = (async () => {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(),12000);
+        try {
+          const query = new URLSearchParams({
+            latitude:String(city.lat),longitude:String(city.lon),
+            current:'temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,cloud_cover,wind_speed_10m,is_day',
+            hourly:'temperature_2m,apparent_temperature,precipitation_probability,weather_code,wind_speed_10m',
+            daily:'temperature_2m_max,temperature_2m_min,uv_index_max,precipitation_probability_max,sunrise,sunset',
+            forecast_days:'3',timezone:'Asia/Shanghai'
+          });
+          const response = await fetch(`https://api.open-meteo.com/v1/forecast?${query}`,{headers:{Accept:'application/json'},cache:'no-store',signal:controller.signal});
+          if (!response.ok) throw new Error(`weather ${response.status}`);
+          const data = await response.json();
+          if (!data?.current?.time || !data?.hourly?.time?.length) throw new Error('weather fields missing');
+          liveWeatherV11 = data;
+          weatherFetchedAt = Date.now();
+          localStorage.setItem(`yzn-weather-${currentCityV11}`,JSON.stringify({data,fetchedAt:weatherFetchedAt,version:APP_VERSION}));
+          weatherMode = 'live';
+          renderV11();
+          setWeatherStatusV11('live',weatherFetchedAt);
+          if (manual) showToast('已获取最新天气并重新生成穿搭');
+        } catch (_) {
+          const hasCache = loadCachedWeather();
+          if (!hasCache) {
+            liveWeatherV11 = null;
+            weatherFetchedAt = 0;
+            weatherMode = 'demo';
+            renderV11();
+            setWeatherStatusV11('demo');
+          }
+          if (manual) showToast(hasCache ? '网络不可用，已显示带时间的缓存' : '天气接口暂不可用，已显示演示数据');
+        } finally {
+          clearTimeout(timeout);
+          fetchInProgress = null;
+        }
+      })();
+      return fetchInProgress;
+    }
+    function refreshIfNeeded(force = false) {
+      const dateChanged = renderedDateKey !== localDateKey();
+      if (dateChanged) renderedDateKey = localDateKey();
+      updateDate();
+      if (force || dateChanged || !weatherFetchedAt || Date.now() - weatherFetchedAt >= REFRESH_INTERVAL_MS) fetchWeatherV11();
+      else if (weatherMode === 'live') setWeatherStatusV11('live',weatherFetchedAt);
+      else if (weatherMode === 'cache') setWeatherStatusV11('cache',weatherFetchedAt);
+    }
+    function openSheetV11(title,body,actions = '') {
+      ui.sheet.innerHTML = `<h3>${title}</h3>${body}<div class="sheet-actions">${actions || '<button class="btn outline" data-close>关闭</button>'}</div>`;
+      ui.modal.classList.add('open');
+    }
+    function feedbackV11() {
+      openSheetV11('记录今日体感',`<div class="eyebrow">选择最接近你今天的感受</div><div class="field"><label>整体感受</label><select id="feel"><option>刚刚好</option><option>有点少</option><option>穿少了</option><option>有点多</option><option>穿多了</option></select></div><div class="field"><label>发生时段</label><select><option>早晨骑车</option><option>中午室内</option><option>傍晚步行</option></select></div><div class="field"><label>是否按推荐穿着</label><select><option>完全按推荐</option><option>部分按推荐</option><option>未按推荐</option></select></div>`,`<button class="btn outline" data-close>取消</button><button class="btn soft" data-submit>保存反馈</button>`);
+    }
+    function contextV11() {
+      openSheetV11('调整今天场景',`<div class="field"><label>今天怎么出行</label><select><option>骑车上学</option><option>步行</option><option>公交 / 地铁</option><option>私家车</option></select></div><div class="field"><label>主要活动</label><select><option>日常学习</option><option>体育课 / 运动</option><option>长时间室内</option><option>户外活动</option></select></div><div class="field"><label>今天的舒适偏好</label><select><option>按平时体感</option><option>想穿暖一点</option><option>想穿凉快一点</option></select></div>`,`<button class="btn outline" data-close>取消</button><button class="btn soft" data-context-save>重新生成建议</button>`);
+    }
+    function regionV11() {
+      openSheetV11('选择福建省地区',`<div class="eyebrow">天气、推荐和提醒会按所选城市更新</div><div class="field"><label>福建省城市</label><select id="regionSelect"><option value="fuzhou">福州市</option><option value="xiamen">厦门市</option><option value="quanzhou">泉州市</option><option value="putian">莆田市</option><option value="zhangzhou">漳州市</option><option value="longyan">龙岩市</option><option value="sanming">三明市</option><option value="nanping">南平市</option><option value="ningde">宁德市</option></select></div><div class="notice"><span>i</span><div>联网时从 Open-Meteo 获取所选城市天气；断网时显示最近缓存及更新时间。</div></div>`,`<button class="btn outline" data-close>取消</button><button class="btn soft" data-region-save>保存地区</button>`);
+      document.getElementById('regionSelect').value = currentCityV11;
+    }
+    function detailV11() {
+      const recommendation = makeRecommendation(liveWeatherV11);
+      const c = recommendation.conditions;
+      const clo = Math.max(.15,Math.min(1.5,.04 * (30 - recommendation.effective))).toFixed(2);
+      openSheetV11('当前穿衣详情',`<div class="metric-row"><div class="metric"><b>${Math.round(c.feels)}°</b><small>天气体感</small></div><div class="metric"><b>${Math.round(recommendation.effective)}°</b><small>个人等效</small></div><div class="metric"><b>${clo}</b><small>目标保暖值</small></div></div><div class="notice" style="margin-top:16px"><span>↗</span><div><b>推荐组合</b><br/>${recommendation.items.map(item => item.name).join(' + ')}</div></div><div class="reason-list" style="margin-top:16px"><div class="reason"><span class="reason-dot">天</span><span>当前 ${Math.round(c.temp)}℃，体感 ${Math.round(c.feels)}℃，风速 ${Math.round(c.wind)} km/h。</span></div><div class="reason"><span class="reason-dot">你</span><span>你对寒冷略敏感，个人体感修正 −${PERSONAL_SENSITIVITY_OFFSET.toFixed(1)}℃。</span></div><div class="reason"><span class="reason-dot">时</span><span>${weatherMode === 'live' ? `天气获取于 ${formatStamp(weatherFetchedAt)}。` : weatherMode === 'cache' ? `当前使用 ${formatStamp(weatherFetchedAt)} 的缓存。` : '当前使用演示数据。'}</span></div></div>`);
+    }
+    function addItemV11() {
+      openSheetV11('添加衣物',`<div class="field"><label>衣物名称</label><input placeholder="例如：灰色抓绒" /></div><div class="field"><label>类别</label><select><option>基础上装</option><option>中间层</option><option>外套</option><option>下装</option><option>鞋子</option></select></div><div class="field"><label>保暖程度</label><select><option>适中</option><option>偏薄</option><option>偏暖</option><option>很暖</option></select></div>`,`<button class="btn outline" data-close>取消</button><button class="btn soft" data-item-save>加入衣橱</button>`);
+    }
+    document.addEventListener('click',event => {
+      const viewButton = event.target.closest('[data-view]');
+      if (viewButton) {
+        document.querySelectorAll('[data-view]').forEach(button => button.classList.toggle('active',button.dataset.view === viewButton.dataset.view));
+        document.querySelectorAll('.view').forEach(view => view.classList.toggle('active',view.id === viewButton.dataset.view));
+        document.getElementById('pageTitle').textContent = {today:'今天穿什么',wardrobe:'我的衣橱',trend:'个性化趋势',settings:'设置'}[viewButton.dataset.view];
+        return;
+      }
+      const action = event.target.closest('[data-action]')?.dataset.action;
+      if (action === 'feedback') feedbackV11();
+      if (action === 'context') contextV11();
+      if (action === 'region') regionV11();
+      if (action === 'refresh') fetchWeatherV11({manual:true});
+      if (action === 'detail') detailV11();
+      if (action === 'addItem') addItemV11();
+      if (action === 'privacy') openSheetV11('隐私与数据','<p>地区、衣橱和反馈保存在当前设备浏览器中。天气接口只接收所选城市的坐标，不上传姓名、身体状态或精确轨迹。</p>');
+      if (action === 'algorithm') openSheetV11('算法说明','<p>系统先用天气体感温度减去个人怕冷修正，再按温度区间选择衣物层级；降雨、风速和紫外线分别追加雨具、防风层和防晒配件。</p>');
+      if (event.target.matches('[data-close]')) ui.modal.classList.remove('open');
+      if (event.target.matches('[data-submit]')) { ui.modal.classList.remove('open'); showToast('反馈已保存，冷热敏感系数 +0.11'); document.getElementById('sMetric').textContent = '+0.91'; }
+      if (event.target.matches('[data-context-save]')) { ui.modal.classList.remove('open'); renderV11(); showToast('已按当前场景重新生成建议'); }
+      if (event.target.matches('[data-region-save]')) {
+        const selected = document.getElementById('regionSelect')?.value;
+        if (citiesV11[selected]) {
+          currentCityV11 = selected; localStorage.setItem('yzn-city',selected); liveWeatherV11 = null; weatherFetchedAt = 0; weatherMode = 'demo'; ui.modal.classList.remove('open');
+          loadCachedWeather(); renderV11(); fetchWeatherV11({manual:true});
+        }
+      }
+      if (event.target.matches('[data-item-save]')) { ui.modal.classList.remove('open'); showToast('衣物已加入衣橱'); }
+      if (event.target.matches('[data-toggle]')) { event.target.classList.toggle('on'); showToast(event.target.classList.contains('on') ? '早晨提醒已开启' : '早晨提醒已关闭'); }
+    });
+    document.addEventListener('visibilitychange',() => { if (document.visibilityState === 'visible') refreshIfNeeded(); });
+    window.addEventListener('online',() => refreshIfNeeded(true));
+    window.addEventListener('pageshow',() => refreshIfNeeded());
+    setInterval(() => refreshIfNeeded(),60 * 1000);
+
+    updateDate();
+    loadCachedWeather();
+    renderV11();
+    fetchWeatherV11();
+    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+      window.addEventListener('load',async () => {
+        try {
+          const registration = await navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'});
+          registration.update();
+          navigator.serviceWorker.addEventListener('controllerchange',() => {
+            if (!sessionStorage.getItem('yzn-sw-reloaded')) { sessionStorage.setItem('yzn-sw-reloaded','1'); location.reload(); }
+          });
+        } catch (_) {}
+      });
+    }
   </script>
 </body>
 </html>
