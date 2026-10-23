@@ -14,7 +14,8 @@
   <title>衣知暖</title>
   <style>
     :root{--bg:#f5f7f2;--paper:#fff;--ink:#17251f;--muted:#6d7c73;--line:#dde5de;--green:#1d6b50;--mint:#dcefe5;--yellow:#f7e7b2;--red:#c55d42;--shadow:0 12px 35px rgba(33,63,50,.08)}
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.45} button,input,select{font:inherit} button{cursor:pointer;border:0} .app{max-width:1120px;margin:auto;min-height:100vh;display:grid;grid-template-columns:225px minmax(0,1fr);gap:28px;padding:22px 22px 35px}.rail{position:sticky;top:20px;height:calc(100vh - 40px);display:flex;flex-direction:column;padding:20px 12px}.brand{display:flex;gap:11px;align-items:center;margin-bottom:35px;padding:0 10px}.brand-mark{width:38px;height:38px;border-radius:12px;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:800;letter-spacing:-1px}.brand b{font-size:17px}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:1px}.nav{display:grid;gap:7px}.nav button{display:flex;align-items:center;gap:11px;width:100%;padding:12px 13px;border-radius:12px;color:var(--muted);background:transparent;text-align:left;font-weight:650}.nav button.active{background:var(--mint);color:var(--green)}.nav .ico{width:19px;text-align:center;font-size:17px}.rail-foot{margin-top:auto;padding:0 11px;color:var(--muted);font-size:12px}.main{min-width:0}.topbar{display:flex;justify-content:space-between;align-items:center;margin:2px 0 22px}.eyebrow{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.02em}.topbar h1{margin:4px 0 0;font-size:29px;letter-spacing:-.8px}.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:99px;background:#fff;border:1px solid var(--line);font-size:12px;color:var(--muted);white-space:nowrap}.dot{width:7px;height:7px;background:#55a979;border-radius:50%}.view{display:none}.view.active{display:block}.hero{background:var(--green);color:#fff;border-radius:20px;padding:24px 25px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:-30px;top:-40px;width:190px;height:190px;border:1px solid rgba(255,255,255,.18);border-radius:50%}.hero-grid{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.hero h2{font-size:28px;line-height:1.15;margin:9px 0 8px;max-width:560px;letter-spacing:-.6px}.hero p{margin:0;color:#d7eee3;font-size:14px;max-width:520px}.weather-big{text-align:right;position:relative;z-index:1}.weather-big strong{font-size:50px;line-height:1;font-weight:780}.weather-big span{display:block;font-size:12px;color:#c8e4d6;margin-top:5px}.hero-actions{display:flex;gap:9px;margin-top:21px;position:relative;z-index:1}.btn{border-radius:10px;padding:10px 14px;font-weight:750;font-size:13px;transition:.2s}.btn.primary{background:#fff;color:var(--green)}.btn.ghost{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#fff}.btn.soft{background:var(--mint);color:var(--green)}.btn.outline{background:#fff;border:1px solid var(--line);color:var(--ink)}.btn:active{transform:translateY(1px)}.grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(250px,.65fr);gap:16px;margin-top:16px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 5px 22px rgba(33,63,50,.04)}.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.panel h3{font-size:15px;margin:0}.link{color:var(--green);font-size:12px;font-weight:750;background:none;padding:0}.look{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}.item{border:1px solid var(--line);border-radius:12px;padding:11px 8px 9px;min-width:0}.item-emoji{height:52px;border-radius:9px;background:#eef4ef;display:grid;place-items:center;font-size:29px;margin-bottom:8px}.item b{display:block;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.item small{display:block;color:var(--muted);font-size:10px;margin-top:2px}.tag{display:inline-flex;font-size:10px;padding:3px 6px;border-radius:5px;background:#edf6f0;color:var(--green);margin-top:7px}.tag.generic{background:#fff4da;color:#967022}.timeline{display:grid;gap:10px}.time-row{display:grid;grid-template-columns:72px 1fr auto;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #edf1ed}.time-row:last-child{border-bottom:0;padding-bottom:0}.time-row:first-child{padding-top:0}.time-label b{font-size:12px}.time-label small{display:block;color:var(--muted);font-size:11px}.time-weather{color:var(--muted);font-size:12px}.time-weather strong{color:var(--ink);font-size:14px;margin-right:7px}.chev{color:var(--green);font-size:20px}.reason-list{display:grid;gap:11px}.reason{display:flex;gap:10px;align-items:flex-start;font-size:13px}.reason-dot{width:24px;height:24px;border-radius:8px;background:var(--mint);color:var(--green);display:grid;place-items:center;font-size:12px;font-weight:800;flex:0 0 auto}.notice{display:flex;gap:10px;align-items:flex-start;padding:12px;border-radius:11px;background:#fff7e2;color:#795f27;font-size:12px;margin-top:13px}.section{margin-top:16px}.filter{display:inline-flex;background:#eef3ee;border-radius:9px;padding:3px}.filter button{padding:7px 10px;border-radius:7px;background:transparent;color:var(--muted);font-size:12px;font-weight:700}.filter button.active{background:#fff;color:var(--green);box-shadow:0 2px 6px rgba(40,60,45,.08)}.bar-chart{height:180px;display:flex;align-items:flex-end;gap:18px;padding:15px 9px 0}.bar-wrap{height:100%;flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px}.bar{width:100%;max-width:44px;background:var(--green);border-radius:7px 7px 3px 3px;min-height:10px}.bar.muted{background:#bdd8c7}.bar-label{font-size:11px;color:var(--muted)}.metric-row{display:flex;gap:10px;margin-top:13px}.metric{flex:1;border:1px solid var(--line);border-radius:11px;padding:10px}.metric b{font-size:20px;display:block}.metric small{font-size:10px;color:var(--muted)}.wardrobe{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.wardrobe-card{border:1px solid var(--line);border-radius:12px;padding:12px}.wardrobe-card .item-emoji{height:66px}.wardrobe-card p{font-size:12px;margin:6px 0 2px;font-weight:750}.wardrobe-card small{font-size:10px;color:var(--muted)}.settings-list{display:grid;gap:8px}.setting{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #edf1ed}.setting:last-child{border-bottom:0}.setting b{display:block;font-size:13px}.setting small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.switch{width:42px;height:24px;border-radius:20px;background:#cfd9d1;padding:3px;transition:.2s}.switch i{display:block;width:18px;height:18px;background:white;border-radius:50%;transition:.2s}.switch.on{background:var(--green)}.switch.on i{transform:translateX(18px)}.modal{position:fixed;inset:0;background:rgba(19,35,28,.34);display:none;align-items:flex-end;justify-content:center;padding:18px;z-index:5}.modal.open{display:flex}.sheet{width:min(560px,100%);background:#fff;border-radius:18px;padding:20px;max-height:88vh;overflow:auto}.sheet h3{margin:0 0 15px}.field{display:grid;gap:7px;margin:12px 0}.field label{font-size:12px;color:var(--muted);font-weight:700}.field select,.field input{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px;background:#fff}.sheet-actions{display:flex;gap:9px;margin-top:18px}.toast{position:fixed;left:50%;bottom:25px;transform:translateX(-50%) translateY(15px);background:#17251f;color:#fff;padding:10px 14px;border-radius:9px;font-size:12px;opacity:0;pointer-events:none;transition:.25s;z-index:9}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.mobile-nav{display:none}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.45} button,input,select{font:inherit} button{cursor:pointer;border:0} .app{max-width:1120px;margin:auto;min-height:100vh;display:grid;grid-template-columns:225px minmax(0,1fr);gap:28px;padding:22px 22px 35px}.rail{position:sticky;top:20px;height:calc(100vh - 40px);display:flex;flex-direction:column;padding:20px 12px}.brand{display:flex;gap:11px;align-items:center;margin-bottom:35px;padding:0 10px}.brand-mark{width:38px;height:38px;border-radius:12px;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:800;letter-spacing:-1px}.brand b{font-size:17px}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:1px}.nav{display:grid;gap:7px}.nav button{display:flex;align-items:center;gap:11px;width:100%;padding:12px 13px;border-radius:12px;color:var(--muted);background:transparent;text-align:left;font-weight:650}.nav button.active{background:var(--mint);color:var(--green)}.nav .ico{width:19px;text-align:center;font-size:17px}.rail-foot{margin-top:auto;padding:0 11px;color:var(--muted);font-size:12px}.main{min-width:0}.topbar{display:flex;justify-content:space-between;align-items:center;margin:2px 0 22px}.eyebrow{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.02em}.topbar h1{margin:4px 0 0;font-size:29px;letter-spacing:-.8px}.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:99px;background:#fff;border:1px solid var(--line);font-size:12px;color:var(--muted);white-space:nowrap}.dot{width:7px;height:7px;background:#55a979;border-radius:50%}.view{display:none}.view.active{display:block}.hero{background:var(--green);color:#fff;border-radius:20px;padding:24px 25px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:-30px;top:-40px;width:190px;height:190px;border:1px solid rgba(255,255,255,.18);border-radius:50%}.hero-grid{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.hero h2{font-size:28px;line-height:1.15;margin:9px 0 8px;max-width:560px;letter-spacing:-.6px}.hero p{margin:0;color:#d7eee3;font-size:14px;max-width:520px}.weather-big{text-align:right;position:relative;z-index:1}.weather-big strong{font-size:50px;line-height:1;font-weight:780}.weather-big span{display:block;font-size:12px;color:#c8e4d6;margin-top:5px}.hero-actions{display:flex;gap:9px;margin-top:21px;position:relative;z-index:1}.btn{border-radius:10px;padding:10px 14px;font-weight:750;font-size:13px;transition:.2s}.btn.primary{background:#fff;color:var(--green)}.btn.ghost{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#fff}.btn.soft{background:var(--mint);color:var(--green)}.btn.outline{background:#fff;border:1px solid var(--line);color:var(--ink)}.btn:active{transform:translateY(1px)}.grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(250px,.65fr);gap:16px;margin-top:16px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 5px 22px rgba(33,63,50,.04)}.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.panel h3{font-size:15px;margin:0}.link{color:var(--green);font-size:12px;font-weight:750;background:none;padding:0}.look{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}.item{border:1px solid var(--line);border-radius:12px;padding:11px 8px 9px;min-width:0}.item-emoji{height:52px;border-radius:9px;background:#eef4ef;display:grid;place-items:center;font-size:29px;margin-bottom:8px}.item b{display:block;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.item small{display:block;color:var(--muted);font-size:10px;margin-top:2px}.tag{display:inline-flex;font-size:10px;padding:3px 6px;border-radius:5px;background:#edf6f0;color:var(--green);margin-top:7px}.tag.generic{background:#fff4da;color:#967022}.timeline{display:grid;gap:10px}.time-row{display:grid;grid-template-columns:72px 1fr auto;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #edf1ed}.time-row:last-child{border-bottom:0;padding-bottom:0}.time-row:first-child{padding-top:0}.time-label b{font-size:12px}.time-label small{display:block;color:var(--muted);font-size:11px}.time-weather{color:var(--muted);font-size:12px}.time-weather strong{color:var(--ink);font-size:14px;margin-right:7px}.chev{color:var(--green);font-size:20px}.reason-list{display:grid;gap:11px}.reason{display:flex;gap:10px;align-items:flex-start;font-size:13px}.reason-dot{width:24px;height:24px;border-radius:8px;background:var(--mint);color:var(--green);display:grid;place-items:center;font-size:12px;font-weight:800;flex:0 0 auto}.notice{display:flex;gap:10px;align-items:flex-start;padding:12px;border-radius:11px;background:#fff7e2;color:#795f27;font-size:12px;margin-top:13px}.section{margin-top:16px}.filter{display:inline-flex;background:#eef3ee;border-radius:9px;padding:3px}.filter button{padding:7px 10px;border-radius:7px;background:transparent;color:var(--muted);font-size:12px;font-weight:700}.filter button.active{background:#fff;color:var(--green);box-shadow:0 2px 6px rgba(40,60,45,.08)}.bar-chart{height:210px;display:flex;align-items:flex-end;gap:12px;padding:30px 9px 0;overflow-x:auto}.bar-wrap{height:100%;min-width:34px;flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:7px}.bar{width:100%;max-width:44px;background:var(--green);border-radius:7px 7px 3px 3px;min-height:10px;position:relative;transition:height .25s}.bar.partial{background:#d6a331}.bar.severe{background:#c55d42}.bar-value{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:750;color:var(--ink);white-space:nowrap}.bar-label{font-size:10px;color:var(--muted);white-space:nowrap}.chart-empty{height:100%;width:100%;display:grid;place-items:center;text-align:center;color:var(--muted);font-size:12px;border:1px dashed var(--line);border-radius:10px;padding:18px}.metric-row{display:flex;gap:10px;margin-top:13px}.metric{flex:1;border:1px solid var(--line);border-radius:11px;padding:10px;min-width:0}.metric b{font-size:20px;display:block}.metric small{font-size:10px;color:var(--muted)}.wardrobe{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.wardrobe-card{border:1px solid var(--line);border-radius:12px;padding:12px}.wardrobe-card .item-emoji{height:66px}.wardrobe-card p{font-size:12px;margin:6px 0 2px;font-weight:750}.wardrobe-card small{font-size:10px;color:var(--muted)}.settings-list{display:grid;gap:8px}.setting{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #edf1ed}.setting:last-child{border-bottom:0}.setting b{display:block;font-size:13px}.setting small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.switch{width:42px;height:24px;border-radius:20px;background:#cfd9d1;padding:3px;transition:.2s}.switch i{display:block;width:18px;height:18px;background:white;border-radius:50%;transition:.2s}.switch.on{background:var(--green)}.switch.on i{transform:translateX(18px)}.modal{position:fixed;inset:0;background:rgba(19,35,28,.34);display:none;align-items:flex-end;justify-content:center;padding:18px;z-index:5}.modal.open{display:flex}.sheet{width:min(560px,100%);background:#fff;border-radius:18px;padding:20px;max-height:88vh;overflow:auto}.sheet h3{margin:0 0 15px}.field{display:grid;gap:7px;margin:12px 0}.field label{font-size:12px;color:var(--muted);font-weight:700}.field select,.field input{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px;background:#fff}.sheet-actions{display:flex;gap:9px;margin-top:18px}.toast{position:fixed;left:50%;bottom:25px;transform:translateX(-50%) translateY(15px);background:#17251f;color:#fff;padding:10px 14px;border-radius:9px;font-size:12px;opacity:0;pointer-events:none;transition:.25s;z-index:9}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.mobile-nav{display:none}
+    .reason-dot.change{width:46px}
     @media(max-width:780px){.app{display:block;padding:14px 14px 86px}.rail{display:none}.topbar{margin:3px 2px 15px}.topbar h1{font-size:24px}.grid{grid-template-columns:1fr}.hero{padding:19px}.hero h2{font-size:24px}.weather-big strong{font-size:40px}.look{grid-template-columns:repeat(3,1fr)}.look .item:nth-child(n+4){display:none}.panel{padding:15px}.mobile-nav{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);padding:8px 10px calc(8px + env(safe-area-inset-bottom));z-index:4}.mobile-nav button{background:none;color:var(--muted);font-size:10px;font-weight:700;display:grid;gap:3px;place-items:center}.mobile-nav button.active{color:var(--green)}.mobile-nav span{font-size:18px}.wardrobe{grid-template-columns:repeat(2,1fr)}}
   </style>
 </head>
@@ -38,8 +39,8 @@
         <div class="panel section"><div class="panel-head"><h3>分时段变化</h3><button class="link" data-action="detail">完整详情 →</button></div><div class="timeline" id="timeline"></div></div>
       </section>
       <section class="view" id="wardrobe"><div class="panel"><div class="panel-head"><div><div class="eyebrow" id="wardrobeCount">已有 0 件衣物</div><h3 style="margin-top:4px;font-size:20px">我的衣橱</h3></div><button class="btn soft" data-action="addItem">＋ 添加衣物</button></div><div class="wardrobe" id="wardrobeGrid"></div></div></section>
-      <section class="view" id="trend"><div class="panel"><div class="panel-head"><div><div class="eyebrow">反馈正在让模型变准</div><h3 style="margin-top:4px;font-size:20px">个性化趋势</h3></div><div class="filter"><button class="active">7天</button><button>14天</button><button>30天</button></div></div><div class="metric-row"><div class="metric"><b id="scoreMetric">72%</b><small>刚刚好比例</small></div><div class="metric"><b id="sMetric">+0.8</b><small>冷热敏感系数</small></div><div class="metric"><b>18</b><small>有效反馈</small></div></div><div class="bar-chart" id="bars"></div><div class="panel-head" style="margin-top:18px;margin-bottom:8px"><h3>系数修正记录</h3><span class="pill">规则模型 v1.0</span></div><div class="reason-list"><div class="reason"><span class="reason-dot">+0.11</span><span>8月12日早晨骑车“有点少”，系数从 +0.69 调整到 +0.80。</span></div><div class="reason"><span class="reason-dot">0</span><span>8月11日中午“刚刚好”，保持当前系数。</span></div><div class="reason"><span class="reason-dot">−0.08</span><span>8月10日傍晚“有点多”，减少厚重外层优先级。</span></div></div></div></section>
-      <section class="view" id="settings"><div class="panel"><div class="eyebrow">偏好与数据</div><h3 style="margin:4px 0 14px;font-size:20px">设置</h3><div class="settings-list"><div class="setting"><div><b>早晨提醒</b><small>工作日 06:45 推送今日建议</small></div><button class="switch on" data-toggle="reminder"><i></i></button></div><div class="setting"><div><b>默认地区</b><small id="settingCity">福建省 · 福州市</small></div><button class="link" data-action="region">修改 →</button></div><div class="setting"><div><b>默认出行方式</b><small>骑车上学</small></div><button class="link" data-action="context">修改 →</button></div><div class="setting"><div><b>天气数据来源</b><small id="weatherSourceText">Open-Meteo · 正在获取</small></div><button class="link" data-action="refresh">刷新 →</button></div><div class="setting"><div><b>自动更新</b><small>每 15 分钟及返回前台时检查</small></div><span class="pill">已开启</span></div><div class="setting"><div><b>应用版本</b><small>2026.10 平潭地区版</small></div><span class="pill">v1.2</span></div><div class="setting"><div><b>隐私与数据</b><small>个人资料、衣橱和反馈仅保存在此设备</small></div><button class="link" data-action="privacy">查看 →</button></div><div class="setting"><div><b>算法说明</b><small>温度、湿度、风速 + 你的反馈</small></div><button class="link" data-action="algorithm">了解 →</button></div></div></div></section>
+      <section class="view" id="trend"><div class="panel"><div class="panel-head"><div><div class="eyebrow">反馈正在让模型变准</div><h3 style="margin-top:4px;font-size:20px">个性化趋势</h3></div><div class="filter" id="trendFilter"><button class="active" data-trend-days="7">7天</button><button data-trend-days="14">14天</button><button data-trend-days="30">30天</button></div></div><div class="metric-row"><div class="metric"><b id="scoreMetric">--</b><small>刚刚好比例</small></div><div class="metric"><b id="sMetric">+0.80</b><small>冷热敏感系数</small></div><div class="metric"><b id="feedbackMetric">0</b><small>有效反馈</small></div></div><div class="bar-chart" id="bars"></div><div class="panel-head" style="margin-top:18px;margin-bottom:8px"><h3>系统修正记录</h3><span class="pill">规则模型 v1.1</span></div><div class="reason-list" id="correctionLog"></div></div></section>
+      <section class="view" id="settings"><div class="panel"><div class="eyebrow">偏好与数据</div><h3 style="margin:4px 0 14px;font-size:20px">设置</h3><div class="settings-list"><div class="setting"><div><b>早晨提醒</b><small>工作日 06:45 推送今日建议</small></div><button class="switch on" data-toggle="reminder"><i></i></button></div><div class="setting"><div><b>默认地区</b><small id="settingCity">福建省 · 福州市</small></div><button class="link" data-action="region">修改 →</button></div><div class="setting"><div><b>默认出行方式</b><small>骑车上学</small></div><button class="link" data-action="context">修改 →</button></div><div class="setting"><div><b>天气数据来源</b><small id="weatherSourceText">Open-Meteo · 正在获取</small></div><button class="link" data-action="refresh">刷新 →</button></div><div class="setting"><div><b>自动更新</b><small>每 15 分钟及返回前台时检查</small></div><span class="pill">已开启</span></div><div class="setting"><div><b>应用版本</b><small>2026.10 反馈闭环版</small></div><span class="pill">v1.3</span></div><div class="setting"><div><b>隐私与数据</b><small>个人资料、衣橱和反馈仅保存在此设备</small></div><button class="link" data-action="privacy">查看 →</button></div><div class="setting"><div><b>算法说明</b><small>温度、湿度、风速 + 你的反馈</small></div><button class="link" data-action="algorithm">了解 →</button></div></div></div></section>
     </main>
   </div>
   <nav class="mobile-nav"><button class="active" data-view="today"><span>⌂</span>今天</button><button data-view="wardrobe"><span>◈</span>衣橱</button><button data-view="trend"><span>⌁</span>趋势</button><button data-view="settings"><span>⚙</span>设置</button></nav>
@@ -69,9 +70,11 @@
     document.addEventListener('click',e=>{const v=e.target.closest('[data-view]');if(v){document.querySelectorAll('[data-view]').forEach(x=>x.classList.toggle('active',x===v||x.dataset.view===v.dataset.view));document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id===v.dataset.view));document.getElementById('pageTitle').textContent={today:'今天穿什么',wardrobe:'我的衣橱',trend:'个性化趋势',settings:'设置'}[v.dataset.view];return}const a=e.target.closest('[data-action]')?.dataset.action;if(a==='feedback')feedback();if(a==='context')context();if(a==='region')region();if(a==='refresh')fetchWeather();if(a==='detail')detail();if(a==='addItem')addItem();if(e.target.matches('[data-close]'))els.modal.classList.remove('open');if(e.target.matches('[data-submit]')){els.modal.classList.remove('open');toast('反馈已保存，冷热敏感系数 +0.11');document.getElementById('sMetric').textContent='+0.91'}if(e.target.matches('[data-context-save]')){els.modal.classList.remove('open');toast('已按当前场景重新生成建议');}if(e.target.matches('[data-region-save]')){const selected=document.getElementById('regionSelect')?.value;if(selected&&cities[selected]){currentCity=selected;localStorage.setItem('yzn-city',selected);liveWeather=null;render();els.modal.classList.remove('open');toast(`地区已切换为${cities[selected].name}`);fetchWeather()}}if(e.target.matches('[data-item-save]')){els.modal.classList.remove('open');toast('衣物已加入衣橱');}if(e.target.matches('[data-toggle]')){e.target.classList.toggle('on');toast(e.target.classList.contains('on')?'早晨提醒已开启':'早晨提醒已关闭')}});render();fetchWeather();if('serviceWorker' in navigator&&location.protocol.startsWith('http')){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
   </script>
   <script>
-    const APP_VERSION = '1.2.0';
+    const APP_VERSION = '1.3.0';
     const REFRESH_INTERVAL_MS = 15 * 60 * 1000;
-    const PERSONAL_SENSITIVITY_OFFSET = 1.6;
+    const INITIAL_SENSITIVITY = 0.8;
+    const FEEDBACK_STORAGE_KEY = 'yzn-feedback-v1';
+    const SENSITIVITY_STORAGE_KEY = 'yzn-sensitivity-v1';
     const citiesV11 = {
       fuzhou:{name:'福州市',district:'鼓楼区',lat:26.0745,lon:119.2965,demoTemp:25},
       xiamen:{name:'厦门市',district:'思明区',lat:24.4798,lon:118.0894,demoTemp:27},
@@ -103,6 +106,9 @@
     let weatherMode = 'demo';
     let fetchInProgress = null;
     let renderedDateKey = localDateKey();
+    let trendDays = 7;
+    let feedbackRecords = loadFeedbackRecords();
+    let sensitivity = loadSensitivity();
 
     const ui = {
       look:document.getElementById('look'), timeline:document.getElementById('timeline'),
@@ -140,6 +146,95 @@
     function safeNumber(value, fallback = 0) {
       return Number.isFinite(Number(value)) ? Number(value) : fallback;
     }
+    function clamp(min, max, value) {
+      return Math.max(min,Math.min(max,value));
+    }
+    function loadFeedbackRecords() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(FEEDBACK_STORAGE_KEY) || '[]');
+        return Array.isArray(saved) ? saved.filter(record => record && Number.isFinite(Number(record.timestamp))) : [];
+      } catch (_) { return []; }
+    }
+    function loadSensitivity() {
+      const raw = localStorage.getItem(SENSITIVITY_STORAGE_KEY);
+      if (raw === null || raw === '') return INITIAL_SENSITIVITY;
+      const saved = Number(raw);
+      return Number.isFinite(saved) ? clamp(-2,2,saved) : INITIAL_SENSITIVITY;
+    }
+    function signed(value, digits = 2) {
+      const rounded = Number(value).toFixed(digits);
+      return Number(value) > 0 ? `+${rounded}` : rounded;
+    }
+    function feedbackScore(value) {
+      return value === 0 ? 100 : Math.abs(value) === 1 ? 60 : 20;
+    }
+    function formatFeedbackDate(timestamp, includeTime = false) {
+      const options = includeTime ? {month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false} : {month:'numeric',day:'numeric'};
+      return new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',...options}).format(timestamp);
+    }
+    function getFilteredFeedback() {
+      const cutoff = Date.now() - trendDays * 24 * 60 * 60 * 1000;
+      return feedbackRecords.filter(record => record.timestamp >= cutoff && record.valid !== false).sort((a,b) => a.timestamp - b.timestamp);
+    }
+    function renderTrend() {
+      const records = getFilteredFeedback();
+      const exact = records.filter(record => Number(record.value) === 0).length;
+      document.getElementById('scoreMetric').textContent = records.length ? `${Math.round(exact / records.length * 100)}%` : '--';
+      document.getElementById('sMetric').textContent = signed(sensitivity);
+      document.getElementById('feedbackMetric').textContent = String(records.length);
+      const bars = document.getElementById('bars');
+      if (!records.length) {
+        bars.innerHTML = '<div class="chart-empty">还没有有效反馈。保存一次今日体感后，这里会显示舒适度柱状图。</div>';
+      } else {
+        const visible = records.slice(-Math.min(trendDays,14));
+        bars.innerHTML = visible.map(record => {
+          const score = feedbackScore(Number(record.value));
+          const tone = score === 100 ? '' : score === 60 ? 'partial' : 'severe';
+          return `<div class="bar-wrap"><div class="bar ${tone}" style="height:${score}%" title="${record.feel} · 舒适度 ${score}"><span class="bar-value">${score}</span></div><span class="bar-label">${formatFeedbackDate(record.timestamp)}</span></div>`;
+        }).join('');
+      }
+      const log = document.getElementById('correctionLog');
+      const cutoff = Date.now() - trendDays * 24 * 60 * 60 * 1000;
+      const recent = feedbackRecords.filter(record => record.timestamp >= cutoff).sort((a,b) => b.timestamp - a.timestamp).slice(0,8);
+      if (!recent.length) {
+        log.innerHTML = '<div class="chart-empty" style="height:auto;min-height:92px">修正记录会说明哪次反馈让系数增加、减少或保持不变。</div>';
+      } else {
+        log.innerHTML = recent.map(record => {
+          const delta = Number(record.delta) || 0;
+          const explanation = record.valid === false
+            ? `因“${record.adherence}”，本次仅留档，系数保持 ${signed(record.newS)}。`
+            : delta === 0
+            ? `系数保持 ${signed(record.newS)}，本次“${record.feel}”说明当前厚度合适。`
+            : `系数从 ${signed(record.oldS)} 调整到 ${signed(record.newS)}，下次将${delta > 0 ? '提高保暖程度' : '降低保暖程度'}。`;
+          return `<div class="reason"><span class="reason-dot change">${signed(delta)}</span><span>${formatFeedbackDate(record.timestamp,true)} · ${record.period}“${record.feel}”；${explanation}</span></div>`;
+        }).join('');
+      }
+    }
+    function saveFeedback() {
+      const feel = document.getElementById('feel')?.value || '刚刚好';
+      const period = document.getElementById('feedbackPeriod')?.value || '早晨骑车';
+      const adherence = document.getElementById('feedbackAdherence')?.value || '完全按推荐';
+      const value = {'穿多了':-2,'有点多':-1,'刚刚好':0,'有点少':1,'穿少了':2}[feel] ?? 0;
+      const confidence = {'完全按推荐':1,'部分按推荐':0.65,'未按推荐':0}[adherence] ?? 0;
+      const validCount = feedbackRecords.filter(record => record.valid !== false).length;
+      const eta = Math.max(0.04,0.16 / Math.sqrt(1 + validCount / 4));
+      const oldS = sensitivity;
+      const delta = clamp(-0.24,0.24,eta * value * confidence);
+      sensitivity = clamp(-2,2,oldS + delta);
+      const valid = confidence > 0;
+      const recommendation = makeRecommendation(liveWeatherV11);
+      const record = {
+        id:`${Date.now()}-${Math.random().toString(16).slice(2,8)}`,
+        timestamp:Date.now(),date:localDateKey(),feel,value,period,adherence,confidence,valid,
+        oldS:Number(oldS.toFixed(4)),newS:Number(sensitivity.toFixed(4)),delta:Number((sensitivity - oldS).toFixed(4)),
+        city:currentCityV11,temperature:Math.round(recommendation.conditions.temp),effectiveTemperature:Math.round(recommendation.effective)
+      };
+      feedbackRecords.push(record);
+      localStorage.setItem(FEEDBACK_STORAGE_KEY,JSON.stringify(feedbackRecords));
+      localStorage.setItem(SENSITIVITY_STORAGE_KEY,String(sensitivity));
+      renderV11();
+      return record;
+    }
     function dailyIndex(data) {
       const date = data?.current?.time?.slice(0,10) || localDateKey();
       const index = data?.daily?.time?.indexOf(date) ?? -1;
@@ -165,7 +260,7 @@
     }
     function makeRecommendation(data) {
       const c = getConditions(data);
-      const effective = c.feels - PERSONAL_SENSITIVITY_OFFSET;
+      const effective = c.feels - 2 * sensitivity;
       let names, title, baseReason;
       if (effective >= 30) {
         names = ['短袖T恤','速干长裤','运动鞋'];
@@ -258,7 +353,7 @@
       document.getElementById('rainText').textContent = `今日最高降雨概率 ${Math.round(c.rain)}%，${c.rain >= 45 ? '请准备雨具。' : '目前无需专门增加防水层。'}`;
       document.getElementById('windText').textContent = `当前风速 ${Math.round(c.wind)} km/h，${c.wind >= 15 ? '骑车建议使用防风外层。' : '风力对穿搭影响较小。'}`;
       document.getElementById('uvText').textContent = `UV ${Math.round(c.uv)}，${c.uv >= 6 ? '午后户外请重点防晒。' : '常规户外防晒即可。'}`;
-      document.getElementById('bars').innerHTML = [['D1',42,1],['D2',58,1],['D3',50,0],['D4',67,1],['D5',72,1],['D6',64,0],['D7',78,1]].map(x => `<div class="bar-wrap"><div class="bar ${x[2] ? '' : 'muted'}" style="height:${x[1]}%" title="${x[1]}%"></div><span class="bar-label">${x[0]}</span></div>`).join('');
+      renderTrend();
     }
     function setWeatherStatusV11(mode, timestamp = 0) {
       weatherMode = mode;
@@ -352,7 +447,7 @@
       ui.modal.classList.add('open');
     }
     function feedbackV11() {
-      openSheetV11('记录今日体感',`<div class="eyebrow">选择最接近你今天的感受</div><div class="field"><label>整体感受</label><select id="feel"><option>刚刚好</option><option>有点少</option><option>穿少了</option><option>有点多</option><option>穿多了</option></select></div><div class="field"><label>发生时段</label><select><option>早晨骑车</option><option>中午室内</option><option>傍晚步行</option></select></div><div class="field"><label>是否按推荐穿着</label><select><option>完全按推荐</option><option>部分按推荐</option><option>未按推荐</option></select></div>`,`<button class="btn outline" data-close>取消</button><button class="btn soft" data-submit>保存反馈</button>`);
+      openSheetV11('记录今日体感',`<div class="eyebrow">选择最接近你今天的感受</div><div class="field"><label>整体感受</label><select id="feel"><option>刚刚好</option><option>有点少</option><option>穿少了</option><option>有点多</option><option>穿多了</option></select></div><div class="field"><label>发生时段</label><select id="feedbackPeriod"><option>早晨骑车</option><option>中午室内</option><option>傍晚步行</option></select></div><div class="field"><label>是否按推荐穿着</label><select id="feedbackAdherence"><option>完全按推荐</option><option>部分按推荐</option><option>未按推荐</option></select></div>`,`<button class="btn outline" data-close>取消</button><button class="btn soft" data-submit>保存反馈</button>`);
     }
     function contextV11() {
       openSheetV11('调整今天场景',`<div class="field"><label>今天怎么出行</label><select><option>骑车上学</option><option>步行</option><option>公交 / 地铁</option><option>私家车</option></select></div><div class="field"><label>主要活动</label><select><option>日常学习</option><option>体育课 / 运动</option><option>长时间室内</option><option>户外活动</option></select></div><div class="field"><label>今天的舒适偏好</label><select><option>按平时体感</option><option>想穿暖一点</option><option>想穿凉快一点</option></select></div>`,`<button class="btn outline" data-close>取消</button><button class="btn soft" data-context-save>重新生成建议</button>`);
@@ -365,7 +460,7 @@
       const recommendation = makeRecommendation(liveWeatherV11);
       const c = recommendation.conditions;
       const clo = Math.max(.15,Math.min(1.5,.04 * (30 - recommendation.effective))).toFixed(2);
-      openSheetV11('当前穿衣详情',`<div class="metric-row"><div class="metric"><b>${Math.round(c.feels)}°</b><small>天气体感</small></div><div class="metric"><b>${Math.round(recommendation.effective)}°</b><small>个人等效</small></div><div class="metric"><b>${clo}</b><small>目标保暖值</small></div></div><div class="notice" style="margin-top:16px"><span>↗</span><div><b>推荐组合</b><br/>${recommendation.items.map(item => item.name).join(' + ')}</div></div><div class="reason-list" style="margin-top:16px"><div class="reason"><span class="reason-dot">天</span><span>当前 ${Math.round(c.temp)}℃，体感 ${Math.round(c.feels)}℃，风速 ${Math.round(c.wind)} km/h。</span></div><div class="reason"><span class="reason-dot">你</span><span>你对寒冷略敏感，个人体感修正 −${PERSONAL_SENSITIVITY_OFFSET.toFixed(1)}℃。</span></div><div class="reason"><span class="reason-dot">时</span><span>${weatherMode === 'live' ? `天气获取于 ${formatStamp(weatherFetchedAt)}。` : weatherMode === 'cache' ? `当前使用 ${formatStamp(weatherFetchedAt)} 的缓存。` : '当前使用演示数据。'}</span></div></div>`);
+      openSheetV11('当前穿衣详情',`<div class="metric-row"><div class="metric"><b>${Math.round(c.feels)}°</b><small>天气体感</small></div><div class="metric"><b>${Math.round(recommendation.effective)}°</b><small>个人等效</small></div><div class="metric"><b>${clo}</b><small>目标保暖值</small></div></div><div class="notice" style="margin-top:16px"><span>↗</span><div><b>推荐组合</b><br/>${recommendation.items.map(item => item.name).join(' + ')}</div></div><div class="reason-list" style="margin-top:16px"><div class="reason"><span class="reason-dot">天</span><span>当前 ${Math.round(c.temp)}℃，体感 ${Math.round(c.feels)}℃，风速 ${Math.round(c.wind)} km/h。</span></div><div class="reason"><span class="reason-dot">你</span><span>冷热敏感系数 ${signed(sensitivity)}，个人体感修正 ${signed(-2 * sensitivity,1)}℃。</span></div><div class="reason"><span class="reason-dot">时</span><span>${weatherMode === 'live' ? `天气获取于 ${formatStamp(weatherFetchedAt)}。` : weatherMode === 'cache' ? `当前使用 ${formatStamp(weatherFetchedAt)} 的缓存。` : '当前使用演示数据。'}</span></div></div>`);
     }
     function addItemV11() {
       openSheetV11('添加衣物',`<div class="field"><label>衣物名称</label><input placeholder="例如：灰色抓绒" /></div><div class="field"><label>类别</label><select><option>基础上装</option><option>中间层</option><option>外套</option><option>下装</option><option>鞋子</option></select></div><div class="field"><label>保暖程度</label><select><option>适中</option><option>偏薄</option><option>偏暖</option><option>很暖</option></select></div>`,`<button class="btn outline" data-close>取消</button><button class="btn soft" data-item-save>加入衣橱</button>`);
@@ -388,7 +483,11 @@
       if (action === 'privacy') openSheetV11('隐私与数据','<p>地区、衣橱和反馈保存在当前设备浏览器中。天气接口只接收所选城市的坐标，不上传姓名、身体状态或精确轨迹。</p>');
       if (action === 'algorithm') openSheetV11('算法说明','<p>系统先用天气体感温度减去个人怕冷修正，再按温度区间选择衣物层级；降雨、风速和紫外线分别追加雨具、防风层和防晒配件。</p>');
       if (event.target.matches('[data-close]')) ui.modal.classList.remove('open');
-      if (event.target.matches('[data-submit]')) { ui.modal.classList.remove('open'); showToast('反馈已保存，冷热敏感系数 +0.11'); document.getElementById('sMetric').textContent = '+0.91'; }
+      if (event.target.matches('[data-submit]')) {
+        const record = saveFeedback();
+        ui.modal.classList.remove('open');
+        showToast(record.valid ? `反馈已保存，系数调整 ${signed(record.delta)}` : '反馈已保存；未按推荐，本次不调整系数');
+      }
       if (event.target.matches('[data-context-save]')) { ui.modal.classList.remove('open'); renderV11(); showToast('已按当前场景重新生成建议'); }
       if (event.target.matches('[data-region-save]')) {
         const selected = document.getElementById('regionSelect')?.value;
@@ -399,6 +498,12 @@
       }
       if (event.target.matches('[data-item-save]')) { ui.modal.classList.remove('open'); showToast('衣物已加入衣橱'); }
       if (event.target.matches('[data-toggle]')) { event.target.classList.toggle('on'); showToast(event.target.classList.contains('on') ? '早晨提醒已开启' : '早晨提醒已关闭'); }
+      const trendButton = event.target.closest('[data-trend-days]');
+      if (trendButton) {
+        trendDays = Number(trendButton.dataset.trendDays) || 7;
+        document.querySelectorAll('[data-trend-days]').forEach(button => button.classList.toggle('active',button === trendButton));
+        renderTrend();
+      }
     });
     document.addEventListener('visibilitychange',() => { if (document.visibilityState === 'visible') refreshIfNeeded(); });
     window.addEventListener('online',() => refreshIfNeeded(true));
